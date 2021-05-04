@@ -11,7 +11,12 @@ import lombok.Data;
 public class ArticleViewModel {
     private Article article;
 
-    public void onClickUrl(View view){
-        Toast.makeText(view.getContext(),  this.article.getUrl(), Toast.LENGTH_LONG).show();
+    public void onClickUrl(View view) {
+        Toast.makeText(view.getContext(), this.article.getUrl(), Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickToggle(View view) {
+        article.setBought(!article.isBought());
+        Toast.makeText(view.getContext(), String.format("Article %s is %s", article.getName(), article.isBought() ? "bought" : "not bought"), Toast.LENGTH_LONG).show();
     }
 }

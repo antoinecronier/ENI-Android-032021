@@ -78,8 +78,10 @@
             android:id="@+id/mainactivity_toggle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:checked="@{viewmodel.article.bought}"
             android:textOn="@string/bought"
             android:textOff="@string/tobuy"
+            android:onClick="@{(v) -> viewmodel.onClickToggle(v)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintWidth_percent="0.5"/>
