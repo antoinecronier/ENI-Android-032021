@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="bought">Acheté</string>
+    <string name="tobuy">A acheter</string>
+</resources>

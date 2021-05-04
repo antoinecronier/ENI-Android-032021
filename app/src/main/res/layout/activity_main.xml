@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainactivity_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pain au chocolat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/page_default_margin"/>
+
+    <TextView
+        android:id="@+id/mainactivity_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0"
+        android:layout_marginTop="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@id/mainactivity_item_name"
+        app:layout_constraintLeft_toLeftOf="@id/mainactivity_item_name"/>
+
+    <TextView
+        android:id="@+id/mainactivity_item_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="€"
+        app:layout_constraintLeft_toRightOf="@id/mainactivity_item_price"
+        app:layout_constraintTop_toTopOf="@id/mainactivity_item_price"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mainactivity_item_price"
+        app:layout_constraintBottom_toBottomOf="@id/mainactivity_item_price"
+        style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+    <TextView
+        android:id="@+id/mainactivity_item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Une viennoiserie au beurre et au chocolat"
+        app:layout_constraintTop_toBottomOf="@id/mainactivity_item_price"
+        app:layout_constraintLeft_toLeftOf="@id/mainactivity_item_price"/>
+
+    <ImageButton
+        android:id="@+id/mainactivity_imgbtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/internet512"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/mainactivity_toggle"
+        app:layout_constraintTop_toTopOf="@id/mainactivity_toggle"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ToggleButton
+        android:id="@+id/mainactivity_toggle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textOn="@string/bought"
+        android:textOff="@string/tobuy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
