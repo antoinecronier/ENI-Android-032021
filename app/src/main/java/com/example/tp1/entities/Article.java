@@ -16,4 +16,5 @@ public class Article {
     private float price;
     private int ratting;
     private String url;
+    private boolean bought;
 }
