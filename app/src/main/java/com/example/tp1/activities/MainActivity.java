@@ -51,20 +51,27 @@ public class MainActivity extends AppCompatActivity {
 //
 //        TextView txtVName = this.findViewById(R.id.mainactivity_item_name);
 //        txtVName.setText(article.getName());
+//
 //        TextView txtVInfo = this.findViewById(R.id.mainactivity_item_info);
 //        txtVInfo.setText(article.getInfo());
+//
 //        TextView txtVPrice = this.findViewById(R.id.mainactivity_item_price);
 //        txtVPrice.setText(String.valueOf(article.getPrice()));
+//
 //        RatingBar rating = this.findViewById(R.id.mainactivity_item_ratting);
 //        rating.setRating(article.getRatting());
+//
 //        ImageButton imgBtn = this.findViewById(R.id.mainactivity_imgbtn);
-//        imgBtn.setOnClickListener(new View.OnClickListener() {
+//        imgBtn.setOnClickListener(new ImageButton.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Toast.makeText(MainActivity.this, article.getUrl(), Toast.LENGTH_LONG).show();
 //            }
 //        });
+//        //imgBtn.setOnClickListener((v) -> {Toast.makeText(MainActivity.this, article.getUrl(), Toast.LENGTH_LONG).show();});
+//
 //        ToggleButton toggleButton = this.findViewById(R.id.mainactivity_toggle);
+//        toggleButton.setChecked(!article.isBought());
 //        toggleButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
