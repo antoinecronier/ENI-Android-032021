@@ -1,8 +1,10 @@
 package com.example.tp1.viewmodels;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.tp1.activities.InfoUrlActivity;
 import com.example.tp1.entities.Article;
 
 import lombok.Data;
@@ -12,7 +14,9 @@ public class ArticleViewModel {
     private Article article;
 
     public void onClickUrl(View view) {
-        Toast.makeText(view.getContext(), this.article.getUrl(), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(view.getContext(), InfoUrlActivity.class);
+        intent.putExtra("data", article);
+        view.getContext().startActivity(intent);
     }
 
     public void onClickToggle(View view) {
